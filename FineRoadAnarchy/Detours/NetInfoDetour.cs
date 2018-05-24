@@ -1,8 +1,4 @@
-﻿using UnityEngine;
-
-using ColossalFramework.Math;
-
-using FineRoadAnarchy.Redirection;
+﻿using FineRoadAnarchy.Redirection;
 
 namespace FineRoadAnarchy.Detours
 {

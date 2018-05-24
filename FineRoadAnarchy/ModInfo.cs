@@ -22,7 +22,7 @@ namespace FineRoadAnarchy
             }
             catch (Exception e)
             {
-                DebugUtils.Log("Could load/create the setting file.");
+                DebugUtils.Log("Couldn't load/create the setting file.");
                 DebugUtils.LogException(e);
             }
         }
@@ -44,6 +44,14 @@ namespace FineRoadAnarchy
                 UIHelper group = helper.AddGroup(Name) as UIHelper;
                 UIPanel panel = group.self as UIPanel;
 
+                UICheckBox checkBox = (UICheckBox)group.AddCheckbox("Disable debug messages logging", DebugUtils.hideDebugMessages.value, (b) =>
+                {
+                    DebugUtils.hideDebugMessages.value = b;
+                });
+                checkBox.tooltip = "If checked, debug messages won't be logged.";
+
+                group.AddSpace(10);
+
                 panel.gameObject.AddComponent<OptionsKeymapping>();
 
                 group.AddSpace(10);
@@ -55,6 +63,6 @@ namespace FineRoadAnarchy
             }
         }
 
-        public const string version = "1.3.3";
+        public const string version = "1.3.4";
     }
 }
