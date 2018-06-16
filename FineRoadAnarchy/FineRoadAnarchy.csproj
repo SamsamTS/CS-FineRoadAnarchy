@@ -206,6 +206,30 @@
     <EmbeddedResource Include="ChirperAtlas\ThumbChirperTechHovered.png" />
     <EmbeddedResource Include="ChirperAtlas\ThumbChirperTechPressed.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChirperAtlas\ChirperJesterhat.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperJesterhatDisabled.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperJesterhatFocused.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperJesterhatHovered.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperJesterhatPressed.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperParkRanger.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperParkRangerDisabled.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperParkRangerFocused.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperParkRangerHovered.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperParkRangerPressed.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperSouvenirGlasses.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperSouvenirGlassesDisabled.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperSouvenirGlassesFocused.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperSouvenirGlassesHovered.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperSouvenirGlassesPressed.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperZookeeper.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperZookeeperFocused.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperZookeeperHovered.png" />
+    <EmbeddedResource Include="ChirperAtlas\ChirperZookeeperPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChirperAtlas\ChirperZookeeperDisabled.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "%25LOCALAPPDATA%25\Colossal Order\Cities_Skylines\Addons\Mods\$(SolutionName)"
