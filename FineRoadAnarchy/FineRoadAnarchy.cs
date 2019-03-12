@@ -61,7 +61,7 @@ namespace FineRoadAnarchy
                     }
                 }
 
-                Redirector<NetInfoDetour>.Deploy();
+                //Redirector<NetInfoDetour>.Deploy();
                 collision = (ToolManager.instance.m_properties.m_mode & ItemClass.Availability.AssetEditor) == ItemClass.Availability.None;
 
                 if (chirperAtlasAnarchy == null)
@@ -146,7 +146,7 @@ namespace FineRoadAnarchy
 
         public void OnDestroy()
         {
-            Redirector<NetInfoDetour>.Revert();
+            //Redirector<NetInfoDetour>.Revert();
             anarchy = false;
         }
 
@@ -215,7 +215,30 @@ namespace FineRoadAnarchy
             }
         }
 
-        public static bool snapping = true;
+        public static bool snapping
+        {
+            get
+            {
+                return !Redirector<NetInfoDetour>.IsDeployed();
+            }
+
+            set
+            {
+                if (value != snapping)
+                {
+                    if (value)
+                    {
+                        DebugUtils.Log("Enabling snapping");
+                        Redirector<NetInfoDetour>.Revert();
+                    }
+                    else
+                    {
+                        DebugUtils.Log("Disabling snapping");
+                        Redirector<NetInfoDetour>.Deploy();
+                    }
+                }
+            }
+        }
 
         public static bool collision
         {
